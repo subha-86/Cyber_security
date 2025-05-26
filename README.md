@@ -1,2 +1,11 @@
 # Cyber_security NMAP
-Nmap, also known as network map, is potentially used for scanning open ports. By scanning open ports we can potentially identify vulnerabilities of any platforms not urls. It can use -Ss Syn Scan and -sV for finding the version. The devices connected to the same network of the local host are checked for finding open ports. TCP transmission Control Protocol is used for reliable communication over a network. The open ports found are upnp- Universal plug and play that's usually used for automatic device discovery and communication. Such a port is not very reliable due to automatic ports opening and weak authentication. The other port found is afs3-fileserver which is used for legacy file sharing where it can become a vulnerability if not secured properly (files can leak sensitive information)
+
+**Nmap (Network Mapper)** is a powerful tool used for scanning open ports on devices. By scanning for open ports, we can potentially identify vulnerabilities on platforms (not specific URLs). Nmap supports several scan types, including `-sS` (SYN scan) for stealthy TCP scanning and `-sV` to detect the version of the services running on those ports.
+
+Devices connected to the same network as the local host can be scanned to check for open ports. **TCP (Transmission Control Protocol)** is used for reliable communication over a network.
+
+Some commonly found open ports include:
+
+UPnP (Universal Plug and Play): Typically used for automatic device discovery and communication. However, it can be unreliable and pose security risks due to automatic port openings and weak or no authentication.
+afs3-fileserver: A legacy file-sharing service that, if not properly secured, can be a vulnerability. It may expose sensitive files and data.
+
