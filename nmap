@@ -1,0 +1,38 @@
+Objective: Learn to discover open ports on devices in your local network to
+understand network exposure.
+
+Step1:
+ this is used for getting local ip addresses
+for a network map to function properly we have to use syn Scan 
+
+ipconfig getifaddr en0
+
+Step2:
+sudo nmap -sS IPaddress/24    ####sudo to change to super user for priviledges
+
+output:
+Host is up (0.0086s latency).     ####LAN
+Not shown: 999 closed tcp ports (reset)  ####one port open
+PORT   STATE SERVICE
+53/tcp open  domain    ####domain name system
+MAC Address: macAddress (Unknown)
+
+Host is up (0.000028s latency).
+Not shown: 998 closed tcp ports (reset)
+PORT     STATE SERVICE
+5000/tcp open  upnp    #####Universal Plug and Play – used by smart devices, routers, or media servers.
+7000/tcp open  afs3-fileserver    ####legacy file sharing
+
+
+Step3:
+for html file conversion:
+
+sudo nmap -sS 192.168.1.0/24 -oX scan_result.xml
+xsltproc scan_result.xml -o scan_result.html  
+
+Step4:
+Reading the file:
+cat scan_result.txt
+
+# Nmap 7.95 scan initiated Mon May 26 18:25:20 2025 as: nmap -sS -oN scan_result.txt 192.168.1.0/24
+# Nmap done at Mon May 26 18:28:46 2025 -- 256 IP addresses (0 hosts up) scanned in 206.98 seconds
