@@ -19,3 +19,9 @@ nmap -sV --version-light target_ip
 3.Trojan Horses / Remote Access Trojans (RATs): Malicious programs that open secret communication channels
 
 4.Default or Open Ports: Login pages or tools left exposed.
+
+# tools used for nmap vulnerabilties:
+* kali
+* metasploitable
+* nikto
+* NMap
